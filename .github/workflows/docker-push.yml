@@ -22,6 +22,7 @@ jobs:
         id: vars
         run: echo "sha_tag=${GITHUB_SHA::7}" >> $GITHUB_OUTPUT
 
+
       - name: Build Docker image
         run: |
           docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/actions-demo:latest .
